@@ -1,6 +1,6 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
+  --primary: #ffffff;
+  --secondary: #50969b;
   --tertiary: #B12704;
   --light: #fafafa;
   --dark: #272f32;
@@ -81,22 +81,24 @@ a:hover {
 
 header {
   background: var(--primary);
+  padding: 20px 0 20px 0;
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
 }
 
 button {
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+  color: var(--light)
 }
 
 button:hover {

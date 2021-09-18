@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 
-import { useStoreContext } from '../utils/GlobalState';
+import Cart from "../components/Cart";
+import { useStoreContext } from "../utils/GlobalState";
 import {
-  UPDATE_PRODUCTS,
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
-  ADD_TO_CART
-} from '../utils/actions';
-import { QUERY_PRODUCTS } from '../utils/queries';
-import spinner from '../assets/spinner.gif';
-import Cart from '../components/Cart';
-import CartItem from '../components/CartItem';
-import { idbPromise } from '../utils/helpers';
+  ADD_TO_CART,
+  UPDATE_PRODUCTS,
+} from "../utils/actions";
+import { QUERY_PRODUCTS } from "../utils/queries";
+import { idbPromise } from "../utils/helpers";
+import spinner from '../assets/spinner.gif'
 
 function Detail() {
   const [state, dispatch] = useStoreContext();
@@ -33,6 +32,9 @@ function Detail() {
         type: UPDATE_PRODUCTS,
         products: data.products
       });
+      data.products.forEach((product) => {
+        idbPromise('products', 'put', product);
+      });
     }
     else if (!loading) {
       idbPromise('products', 'get').then((indexedProducts) => {
@@ -45,8 +47,7 @@ function Detail() {
   }, [products, data, loading, dispatch, id]);
 
   const addToCart = () => {
-    const itemInCart = cart.find((CartItem) => CartItem._id === id);
-
+    const itemInCart = cart.find((cartItem) => cartItem._id === id)
     if (itemInCart) {
       dispatch({
         type: UPDATE_CART_QUANTITY,
@@ -63,8 +64,9 @@ function Detail() {
         product: { ...currentProduct, purchaseQuantity: 1 }
       });
       idbPromise('cart', 'put', { ...currentProduct, purchaseQuantity: 1 });
+
     }
-  };
+  }
 
   const removeFromCart = () => {
     dispatch({
@@ -76,7 +78,7 @@ function Detail() {
 
   return (
     <>
-      {currentProduct ? (
+      {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">← Back to Products</Link>
 

@@ -15,6 +15,7 @@
   .cart h2 {
     font-size: 1.5rem;
     border-bottom: 1px solid var(--dark);
+    background-color: var(--light);
     padding-bottom: .5rem;
     margin: 1rem 0;
   }
@@ -46,8 +47,6 @@
   
   .cart-closed:hover {
     transform: rotate(8deg);
-    background-color: #b881ff;
-    border-radius: 90%;
   }
   
   .cart img {
@@ -59,6 +58,7 @@
     width: 50px;
     padding: 0;
     margin: 0 .5rem 1rem 0;
+    
   }
   
   @media screen and (max-width: 768px) {

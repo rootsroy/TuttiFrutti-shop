@@ -39,7 +39,8 @@ function CategoryMenu({ setCategory }) {
 
   return (
     <div>
-      <h2>Choose a Category:</h2>
+      <h3>Category</h3>
+      <br />
       {categories.map((item) => (
         <button
           key={item._id}
@@ -50,6 +51,7 @@ function CategoryMenu({ setCategory }) {
           {item.name}
         </button>
       ))}
+      <br />
     </div>
   );
 }

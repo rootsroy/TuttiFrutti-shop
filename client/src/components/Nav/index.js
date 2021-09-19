@@ -40,21 +40,23 @@ function Nav() {
   }
 
   return (
-    <div>
-      <header className="flex-row px-1">
-        <h1>
-          <Link to="/">
-            <span role="img" aria-label="shopping bag">🟣</span>
-            Tutti Frutti
-          </Link>
-        </h1>
-      </header>
 
-      <nav>
-        {showNavigation()}
-      </nav>
+    <header className="flex-row px-1">
+      <h1 className="">
+        <Link to="/">
+          <span role="img" aria-label="shopping bag">🟣</span>
+          Tutti
+          Frutti
+        </Link>
+      </h1>
 
-    </div>
+      <div className="flex-row px-1">
+        <nav>
+          {showNavigation()}
+        </nav>
+      </div>
+    </header>
+
   );
 }
 

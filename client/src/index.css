@@ -2,7 +2,7 @@
   --primary: #ffffff;
   --secondary: #50969b;
   --tertiary: #aba9a9;
-  --light: #fafafa;
+  --light: #f8f3f9;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -74,7 +74,6 @@ p {
 a {
   color: var(--tertiary);
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
@@ -136,6 +135,8 @@ input:focus {
   border: 1px solid var(--secondary);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
+
+
 
 .container {
   width: 85%;

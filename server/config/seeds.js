@@ -99,7 +99,7 @@ db.once('open', async () => {
       quantity: 10
     },
     {
-      name: 'flower-field Short-Sleeve',
+      name: 'Flower-Field Short-Sleeve',
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'top10.jpeg',
@@ -131,7 +131,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'bottom3.jpeg',
-      price: 32.50,
+      price: 32.55,
       quantity: 10
     },
     {
@@ -140,7 +140,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'bottom4.jpeg',
-      price: 34.50,
+      price: 34.55,
       quantity: 10
     },
     {
@@ -158,7 +158,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'bottom6.jpeg',
-      price: 44.50,
+      price: 44.55,
       quantity: 10
     },
     {
@@ -185,7 +185,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'bottom9.jpeg',
-      price: 37.50,
+      price: 37.55,
       quantity: 10
     },
     {
@@ -212,7 +212,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'jacket2.jpeg',
-      price: 60.50,
+      price: 60.55,
       quantity: 10
     },
     {
@@ -221,7 +221,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'jacket3.jpeg',
-      price: 49.50,
+      price: 49.55,
       quantity: 10
     },
     {
@@ -230,7 +230,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'jacket4.jpeg',
-      price: 65.50,
+      price: 65.55,
       quantity: 10
     },
     {
@@ -275,7 +275,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'active4.jpeg',
-      price: 32.50,
+      price: 32.55,
       quantity: 10
     },
     {
@@ -293,7 +293,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'active6.jpeg',
-      price: 30.50,
+      price: 30.55,
       quantity: 10
     },
     {
@@ -337,7 +337,7 @@ db.once('open', async () => {
       category: categories[4]._id,
       description: '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men1.jpeg',
-      price: 1.99,
+      price: 31.99,
       quantity: 10
     },
     {
@@ -346,7 +346,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men2.jpeg',
-      price: 2.99,
+      price: 72.39,
       quantity: 10
     },
     {
@@ -355,7 +355,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men3.jpeg',
-      price: 7.99,
+      price: 37.75,
       quantity: 10
     },
     {
@@ -364,7 +364,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men4.jpeg',
-      price: 9.99,
+      price: 29.55,
       quantity: 10
     },
     {
@@ -373,7 +373,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men5.jpeg',
-      price: 9.99,
+      price: 29.59,
       quantity: 10
     },
     {
@@ -382,7 +382,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men6.jpeg',
-      price: 9.99,
+      price: 19.75,
       quantity: 10
     },
     {
@@ -391,7 +391,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men7.jpeg',
-      price: 9.99,
+      price: 26.99,
       quantity: 10
     },
     {
@@ -400,7 +400,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men8.jpeg',
-      price: 9.99,
+      price: 37.85,
       quantity: 10
     },
     {
@@ -409,7 +409,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men9.jpeg',
-      price: 9.99,
+      price: 37.85,
       quantity: 10
     },
     {
@@ -418,7 +418,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men10.jpeg',
-      price: 9.99,
+      price: 50.85,
       quantity: 10
     },
     {
@@ -427,7 +427,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men11.jpeg',
-      price: 9.99,
+      price: 32.99,
       quantity: 10
     },
     {
@@ -436,7 +436,7 @@ db.once('open', async () => {
       description:
         '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
       image: 'men12.jpeg',
-      price: 9.99,
+      price: 30.55,
       quantity: 10
     }
   ]);

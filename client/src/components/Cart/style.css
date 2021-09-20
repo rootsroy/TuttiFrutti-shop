@@ -12,7 +12,7 @@
     border-bottom-left-radius: .5rem;
   }
   
-  .cart h2 {
+  .cart h5 {
     font-size: 1.5rem;
     border-bottom: 1px solid var(--dark);
     background-color: var(--light);
@@ -60,10 +60,13 @@
     margin: 0 .5rem 1rem 0;
     
   }
+ a.icon {
+    display: none;
+  }
   
   @media screen and (max-width: 768px) {
     .cart {
-      position: relative;
+      position:relative;
       max-width: 100%;
       max-height: auto;
       box-shadow: none;
@@ -71,7 +74,22 @@
     }
   
     .cart-closed {
-      position: relative;
+      position:relative;
       margin: 0 auto;
+    }
+    .topNav{
+      overflow: hidden;
+      position: relative;
+    }
+
+    a.icon {
+      display: block;
+      position:fixed;
+      right: 0;
+      top: 1;
+    }
+    
+    .links {
+      display: none;
     }
   }

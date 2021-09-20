@@ -23,7 +23,7 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="flex-row" style={{ alignSelf: 'flex-end' }}>
           <li className="mx-1">
             <Link to="/signup">
               Signup
@@ -39,10 +39,19 @@ function Nav() {
     }
   }
 
+  function myFunction() {
+    var x = document.getElementsByClassName("links");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
   return (
 
-    <header className="flex-row px-1">
-      <h1 className="">
+    <header className="flex-row px-1 topNav">
+      <h1 style={{ alignSelf: 'stretch' }}>
         <Link to="/">
           <span role="img" aria-label="shopping bag">🟣</span>
           Tutti
@@ -50,11 +59,14 @@ function Nav() {
         </Link>
       </h1>
 
-      <div className="flex-row px-1">
-        <nav>
-          {showNavigation()}
-        </nav>
-      </div>
+
+      <nav className="links">
+        {showNavigation()}
+      </nav>
+      <a href="javascript:void(0);" class="icon" onclick='myFunction()'>
+        <i class="fa fa-bars"></i>
+      </a>
+
     </header>
 
   );

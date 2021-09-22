@@ -4,7 +4,7 @@ import { QUERY_CATEGORIES } from '../../utils/queries';
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from "../../utils/actions";
 import { idbPromise } from '../../utils/helpers';
-import hero from '../../assets/hero2.jpeg'
+
 
 function CategoryMenu({ setCategory }) {
   const [state, dispatch] = useStoreContext();

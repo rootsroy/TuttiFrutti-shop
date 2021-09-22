@@ -1,7 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Logo from '../../assets/Logo2.png'
+import Logo from '../../assets/Logo-sm1.png'
 
 
 function Nav() {
@@ -52,7 +52,7 @@ function Nav() {
 
   return (
 
-    <header className="flex-row px-1 topNav">
+    <header className="flex-row px-1">
       <h1 style={{ alignSelf: 'stretch' }}>
         <Link to="/">
           <img src={Logo} alt="Logo"></img>

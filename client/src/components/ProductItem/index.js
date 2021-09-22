@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { idbPromise, pluralize } from "../../utils/helpers";
+import { idbPromise } from "../../utils/helpers";
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 
@@ -9,8 +9,7 @@ function ProductItem(item) {
     image,
     name,
     _id,
-    price,
-    quantity
+    price
   } = item;
 
   const [state, dispatch] = useStoreContext();

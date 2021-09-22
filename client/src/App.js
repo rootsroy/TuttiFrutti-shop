@@ -16,6 +16,7 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
+import Landing from './pages/Landing';
 
 //import GlobalState
 import { StoreProvider } from './utils/GlobalState';
@@ -47,7 +48,8 @@ function App() {
           <StoreProvider>
             <Nav />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/home" component={Home} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/success" component={Success} />

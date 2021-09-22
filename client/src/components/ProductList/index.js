@@ -6,6 +6,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import { idbPromise } from "../../utils/helpers";
 import spinner from "../../assets/spinner.gif"
+import CategoryMenu from "../CategoryMenu";
 
 function ProductList({ }) {
   const [state, dispatch] = useStoreContext();
@@ -43,8 +44,12 @@ function ProductList({ }) {
     <div className="my-2">
       <br />
       <h4>Products:</h4>
+      <br />
+      <br />
+      <CategoryMenu />
       {state.products.length ? (
         <div className="flex-row">
+
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

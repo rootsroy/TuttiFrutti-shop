@@ -39,7 +39,7 @@ function CategoryMenu({ setCategory }) {
 
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       {categories.map((item) => (
         <button
           key={item._id}

@@ -34,12 +34,11 @@
   }
   
   .cart-closed {
-    position: fixed;
+    position:absolute;
     top: 2%;
     right: 1%;
     font-size: 2rem;
-    cursor: pointer;
-    
+    cursor: pointer;  
     padding: .25rem;
     width: 50px;
     height: 50px;

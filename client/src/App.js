@@ -18,6 +18,10 @@ import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
 import Landing from './pages/Landing';
 import Footer from './components/Footer';
+import { StrictMode } from "react";
+import ReactDOM from "react-dom";
+
+
 
 //import GlobalState
 import { StoreProvider } from './utils/GlobalState';
@@ -40,7 +44,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 function App() {
   return (
     <ApolloProvider client={client}>

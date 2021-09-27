@@ -1,15 +1,18 @@
 import React from "react";
 import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import Logo from '../../assets/Logo-sm1.png'
+import "./index.css";
 
-
-function Nav() {
-
+function Header() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
         <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/">
+              Home
+            </Link>
+          </li>
           <li className="mx-1">
             <Link to="/orderHistory">
               Order History
@@ -27,6 +30,11 @@ function Nav() {
       return (
         <ul className="flex-row" style={{ alignSelf: 'flex-end' }}>
           <li className="mx-1">
+            <Link to="/">
+              Home
+            </Link>
+          </li>
+          <li className="mx-1">
             <Link to="/signup">
               Signup
             </Link>
@@ -36,50 +44,30 @@ function Nav() {
               Login
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/">
-              About
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/">
-              Contact Us
-            </Link>
-          </li>
         </ul>
       );
     }
   }
 
-  function myFunction() {
-    var x = document.getElementsByClassName("links");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+  const myFunction = () => {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
     } else {
-      x.style.display = "block";
+      x.className = "topnav";
     }
-  }
+  };
 
   return (
-
-    <header className="flex-row px-1">
-      <h1 style={{ alignSelf: 'stretch' }}>
-        <Link to="/">
-          <img src={Logo} alt="Logo"></img>
-        </Link>
-      </h1>
-
-
-      <nav className="links">
-        {showNavigation()}
-      </nav>
-      <a href="javascript:void(0);" class="icon" onclick='myFunction()'>
-        <i class="fa fa-bars"></i>
+    <nav className="topnav" id="myTopnav">
+      <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+        <i className="fa fa-bars"></i>
       </a>
+      {showNavigation()}
 
-    </header>
 
+    </nav>
   );
 }
 
-export default Nav;
+export default Header;

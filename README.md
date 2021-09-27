@@ -24,6 +24,8 @@ https://pacific-tundra-51518.herokuapp.com/
 ![](./client/src/assets/tutti-frutti.png)
 
 ## Contact
-If you have any questions feel free to contact us through Github: [Araceli](https://github.com/Araceli4690)
-[Diana](https://github.com/dwmauricio13)
-[Ruth](https://github.com/rootsroy)
+If you have any questions feel free to contact us through Github:
+
+- [Araceli](https://github.com/Araceli4690)
+- [Diana](https://github.com/dwmauricio13)
+- [Ruth](https://github.com/rootsroy)

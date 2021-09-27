@@ -1,8 +1,8 @@
 import React from "react";
-import landing1 from '../assets/TFSL1.svg'
-import landing2 from '../assets/TFSL2.svg'
-import landing3 from '../assets/TFSL4.svg'
-import landing4 from '../assets/TFSL3.svg'
+import landing1 from '../assets/TFLogo.png'
+import landing2 from '../assets/TFLogo.png'
+import landing3 from '../assets/TFLogo.png'
+import landing4 from '../assets/TFLogo.png'
 import { Link } from "react-router-dom";
 import Cart from "../components/Cart";
 

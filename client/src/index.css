@@ -1,8 +1,8 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
+  --primary: #ffffff;
+  --secondary: #50969b;
+  --tertiary: #aba9a9;
+  --light: #f8f3f9;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -11,6 +11,7 @@
 
 * {
   box-sizing: border-box;
+  background-color:  var(--primary) ;
 }
 
 html,
@@ -22,9 +23,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Karla', sans-serif;
-  font-weight: 400;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 12px;
   color: var(--dark);
 }
 
@@ -54,6 +54,7 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
+  text-align: center;
 }
 
 h5 {
@@ -65,42 +66,46 @@ h6 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: .75rem;
   margin-top: 0;
 }
 
 a {
   color: var(--tertiary);
   text-decoration: none;
-  font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+ul {
+  list-style-type: none;
+}
+
 header {
   background: var(--primary);
+  padding: 5px 0 0px 0;
 }
 
 header a {
-  color: var(--light);
+  color: var(--dark);
 }
 
 button {
-  font-size: 1rem;
+  font-size: .80rem;
   text-decoration: none;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 0 1px;
-  background-color: var(--secondary);
+  color: var(--dark);
 }
 
 button:hover {
   opacity: .8;
+  text-decoration: underline;
 }
 
 button[disabled] {
@@ -133,9 +138,38 @@ input:focus {
   border: 1px solid var(--secondary);
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
+.Footer {
+  text-align: center;
+  padding: 8px 0 5px 0;
+}
+.button-container{
+  display:inline-block;
+  position:relative;
+  }
+
+  
+  .button-container button{
+  position:absolute;
+  bottom:20em;
+  right:26em;
+  background-color: var(--light);
+  border-radius:1.5em;
+  color:var(--dark);
+  text-transform:uppercase;
+  font-size: 12px;
+  padding:1em 1.5em;
+  }
+
+.hero{
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -203,8 +237,26 @@ input:focus {
   color: var(--error);
 }
 
+
+
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
   }
+  .button-container{
+    display:inline-block;
+    position:relative;
+    }
+
+  .button-container button{
+    position:absolute;
+    bottom: 12em;
+    right:18em;
+    background-color: var(--light);
+    border-radius:1.5em;
+    color:var(--dark);
+    text-transform:uppercase;
+    font-size: 8px;
+    }
 }
+

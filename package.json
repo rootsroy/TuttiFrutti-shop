@@ -1,35 +1,22 @@
 {
-  "name": "dimon",
-  "version": "0.1.0",
+  "name": "mern-shopping",
+  "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "dev": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "url-loader": "^4.0.0"
+    "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "gatsby": "^2.25.3",
-    "gatsby-image": "^2.4.21",
-    "gatsby-plugin-react-helmet": "^3.3.14",
-    "gatsby-plugin-sharp": "^2.7.1",
-    "gatsby-source-filesystem": "^2.4.2",
-    "gatsby-transformer-sharp": "^2.5.21",
-    "next": "^11.1.2",
-    "react": "^16.13.1",
-    "react-countup": "^4.3.3",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
-    "react-id-swiper": "^3.0.0",
-    "react-modal-video": "^1.2.3",
-    "react-visibility-sensor": "^5.1.1",
-    "swiper": "^5.3.6"
-  },
-  "private": true
+    "react-burger-menu": "^3.0.6"
+  }
 }

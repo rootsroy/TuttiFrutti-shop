@@ -5,11 +5,11 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Tops' },
+    { name: 'Bottoms' },
+    { name: 'Jackets' },
+    { name: 'Active' },
+    { name: 'Men' }
   ]);
 
   console.log('categories seeded');
@@ -18,111 +18,426 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Redburst Top',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top1.jpeg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 20.99,
+      quantity: 10
     },
     {
-      name: 'Canned Coffee',
+      name: 'Sea-Foam Long-Sleeve',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top2.jpeg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 21.99,
+      quantity: 10
     },
     {
-      name: 'Toilet Paper',
+      name: 'Lightspun Long-Sleeve',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top3.jpeg',
+      category: categories[0]._id,
+      price: 21.99,
+      quantity: 10
+    },
+    {
+      name: 'Sunshine Top',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top4.jpeg',
+      category: categories[0]._id,
+      price: 20.99,
+      quantity: 10
+    },
+    {
+      name: 'Plaid Long-Sleeve',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top5.jpeg',
+      category: categories[0]._id,
+      price: 24.99,
+      quantity: 10
+    },
+    {
+      name: 'Plaid Short-Sleeve',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top6.jpeg',
+      category: categories[0]._id,
+      price: 23.99,
+      quantity: 10
+    },
+    {
+      name: 'Flower-Field Top',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top7.jpeg',
+      category: categories[0]._id,
+      price: 24.99,
+      quantity: 10
+    },
+    {
+      name: 'Boyfriend Long-Sleeve',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top8.jpeg',
+      category: categories[0]._id,
+      price: 26.99,
+      quantity: 10
+    },
+    {
+      name: 'Rosy Top',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top9.jpeg',
+      category: categories[0]._id,
+      price: 22.99,
+      quantity: 10
+    },
+    {
+      name: 'Flower-Field Short-Sleeve',
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'top10.jpeg',
+      category: categories[0]._id,
+      price: 21.99,
+      quantity: 10
+    },
+    {
+      name: 'Flyn Pant',
       category: categories[1]._id,
       description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom1.jpeg',
+      price: 37.99,
+      quantity: 10
     },
     {
-      name: 'Handmade Soap',
+      name: 'Bermuda Shorts',
       category: categories[1]._id,
       description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom2.jpeg',
+      price: 35.99,
+      quantity: 10
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: 'Curdory Wide leg Pant',
       category: categories[1]._id,
       description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom3.jpeg',
+      price: 32.55,
+      quantity: 10
     },
     {
-      name: 'Camera',
+      name: 'Coral Wide Leg Pant',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom4.jpeg',
+      price: 34.55,
+      quantity: 10
+    },
+    {
+      name: 'Stripe Wide Leg Pant',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom5.jpeg',
+      price: 34.99,
+      quantity: 10
+    },
+    {
+      name: 'Denim Wide Leg Pant',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom6.jpeg',
+      price: 44.55,
+      quantity: 10
+    },
+    {
+      name: 'Lys Shorts',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom7.jpeg',
+      price: 34.99,
+      quantity: 10
+    },
+    {
+      name: 'Daily Shorts',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom8.jpeg',
+      price: 34.75,
+      quantity: 10
+    },
+    {
+      name: 'Poplin Skirt',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom9.jpeg',
+      price: 37.55,
+      quantity: 10
+    },
+    {
+      name: 'Weekender Skirt',
+      category: categories[1]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'bottom10.jpeg',
+      price: 44.99,
+      quantity: 10
+    },
+    {
+      name: 'Oversized Plaid Jacket',
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'jacket1.jpeg',
+      price: 70.99,
+      quantity: 10
     },
     {
-      name: 'Tablet',
+      name: 'Plaid Jakcet',
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'jacket2.jpeg',
+      price: 60.55,
+      quantity: 10
     },
     {
-      name: 'Tales at Bedtime',
+      name: 'Quilted Puffer Jacket',
+      category: categories[2]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'jacket3.jpeg',
+      price: 49.55,
+      quantity: 10
+    },
+    {
+      name: 'Addition Vest',
+      category: categories[2]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'jacket4.jpeg',
+      price: 65.55,
+      quantity: 10
+    },
+    {
+      name: 'Quilted Coat',
+      category: categories[2]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'jacket5.jpeg',
+      price: 60.99,
+      quantity: 10
+    },
+    {
+      name: 'Form Crop Top',
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active1.jpeg',
+      price: 29.99,
+      quantity: 10
     },
     {
-      name: 'Spinning Top',
+      name: 'Form High-Rise Leggings',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active2.jpeg',
+      price: 25.99,
+      quantity: 10
+    },
+    {
+      name: 'Form High-Rise Leggings',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active3.jpeg',
+      price: 30.99,
+      quantity: 10
+    },
+    {
+      name: 'Form High-Rise Biker Shorts',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active4.jpeg',
+      price: 32.55,
+      quantity: 10
+    },
+    {
+      name: 'Colorblock Crop Top',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active5.jpeg',
+      price: 24.99,
+      quantity: 10
+    },
+    {
+      name: 'Half-Zip Crop Top',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active6.jpeg',
+      price: 30.55,
+      quantity: 10
+    },
+    {
+      name: 'Colorblock Form Leggings',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active7.jpeg',
+      price: 19.99,
+      quantity: 10
+    },
+    {
+      name: 'Tri-Color Crop Top',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active8.jpeg',
+      price: 29.99,
+      quantity: 10
+    },
+    {
+      name: 'High-Rise Leggings',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active9.jpeg',
+      price: 28.99,
+      quantity: 10
+    },
+    {
+      name: 'Form High-Rise Leggings',
+      category: categories[3]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'active10.jpeg',
+      price: 29.75,
+      quantity: 10
+    },
+    {
+      name: 'Knitted Sweater',
       category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
+      description: '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men1.jpeg',
+      price: 31.99,
+      quantity: 10
     },
     {
-      name: 'Set of Plastic Horses',
+      name: 'Puffer Jacket',
       category: categories[4]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men2.jpeg',
+      price: 72.39,
+      quantity: 10
     },
     {
-      name: 'Teddy Bear',
+      name: 'Cargo Pant',
       category: categories[4]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men3.jpeg',
+      price: 37.75,
+      quantity: 10
     },
     {
-      name: 'Alphabet Blocks',
+      name: 'Fleece Button Up',
       category: categories[4]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men4.jpeg',
+      price: 29.55,
+      quantity: 10
+    },
+    {
+      name: 'Corduroy Jacket',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men5.jpeg',
+      price: 29.59,
+      quantity: 10
+    },
+    {
+      name: 'Heather Long-Sleeve',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men6.jpeg',
+      price: 19.75,
+      quantity: 10
+    },
+    {
+      name: 'Plaid Long-Sleeve',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men7.jpeg',
+      price: 26.99,
+      quantity: 10
+    },
+    {
+      name: 'Straight-Leg Pant',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men8.jpeg',
+      price: 37.85,
+      quantity: 10
+    },
+    {
+      name: 'Straight-Leg Pant',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men9.jpeg',
+      price: 37.85,
+      quantity: 10
+    },
+    {
+      name: 'Straight-Leg Corduroy Overalls',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men10.jpeg',
+      price: 50.85,
+      quantity: 10
+    },
+    {
+      name: 'Lounge Joggers',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men11.jpeg',
+      price: 32.99,
+      quantity: 10
+    },
+    {
+      name: 'Denim Button Up',
+      category: categories[4]._id,
+      description:
+        '100% cotton, machine wash, low tumble dry. We partner with the Better Cotton Initiative to improve cotton farming globally.',
+      image: 'men12.jpeg',
+      price: 30.55,
+      quantity: 10
     }
   ]);
 

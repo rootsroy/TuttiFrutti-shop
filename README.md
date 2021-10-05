@@ -1,4 +1,4 @@
-# Tutti Fruttyyyy
+# Tutti Frutti
 
 ## table of contents
 
